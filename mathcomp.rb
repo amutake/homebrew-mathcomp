@@ -1,6 +1,6 @@
 require "formula"
 
-class MathComp < Formula
+class Mathcomp < Formula
 
   homepage "http://ssr.msr-inria.inria.fr/"
   url "http://ssr.msr-inria.inria.fr/FTP/mathcomp-1.5.tar.gz"
