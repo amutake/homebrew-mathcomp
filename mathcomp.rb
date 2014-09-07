@@ -9,7 +9,11 @@ class Mathcomp < Formula
   depends_on "ssreflect"
 
   def install
-    system "make"
-    system "make", "install"
+    args = ["COQBIN=#{HOMEBREW_PREFIX}/bin/",
+            "COQLIBINSTALL=lib/coq/user-contrib",
+            "COQDOCINSTALL=share/doc",
+            "DSTROOT=#{prefix}/"]
+    system "make", *args
+    system "make", "install", *args
   end
 end
